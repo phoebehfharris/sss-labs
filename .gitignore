@@ -1,0 +1,15 @@
+.DS_Store
+.idea
+*.log
+tmp/
+.vagrant/
+
+*.o
+*.out
+
+lab1/hello32
+lab1/hello64
+lab1/hello-c
+lab1/checkpass
+lab1/question8
+

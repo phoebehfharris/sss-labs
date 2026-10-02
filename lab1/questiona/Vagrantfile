@@ -1,0 +1,15 @@
+Vagrant.configure("2") do |config|
+  config.vm.box = "DefinedNet/openbsd78"
+
+  config.vm.synced_folder ".", "/vagrant", disabled: true
+
+  config.vm.provision "shell", inline: <<-SHELL
+    pkg_add -u
+    pkg_add -i vim-9.1.1706-no_x11
+    pkg_add -i nasm
+  SHELL
+
+  config.ssh.username = "vagrant"
+  config.ssh.password = "vagrant"
+  config.ssh.insert_key = false
+end
